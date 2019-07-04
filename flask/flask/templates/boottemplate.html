@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Translate</title>
+  <link rel="shortcut icon" href="icon.png" type="image/png">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="jumbotron text-center" style="background-color: #5bc0de">
+  <h1>Translate Document</h1>
+  <p>Japanese - English Document</p> 
+</div>
+
+<div class="container">
+  <h2>Translate</h2>
+  <div class="panel panel-default">
+    <div class="panel-body">
+        <form class="upload">
+            <div class="form-group row">
+                <label class="control-label col-sm-5">Select a Japanese Document: </label>
+                <input type="file" class="btn col-sm-5" id="file" placeholder="Enter email" name="email">
+            </div>
+            <div class="form-group row">
+                <label class="control-label col-sm-5">Click Translate Button to Translate:</label>
+                <button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">Translate</button>
+            </div>
+            <div class="alert alert-danger alert-dismissible">
+                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                <strong>Error!</strong> Upload Only XLSX Format!!!
+            </div>
+            <div class="alert alert-info alert-dismissible">
+                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                <strong>Info!</strong> Document Translated Successfully
+             </div>
+        </form>
+        <form class="download" action="downloadhc">
+            <div class="form-group row">
+                <label class="control-label col-sm-5">Download Translated Document: </label>
+                <button type="button" class="btn btn-info">Download</button>
+            </div>
+        </form>
+    </div>
+  </div>
+</div>
+
+<div class="modal center my-auto h-100 row align-items-center w-3" id="myModal" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body row">
+                <div class="center">
+                    <p> Translating....</div>
+                    <div class="spinner-grow text-muted"></div>
+                    <div class="spinner-grow text-primary"></div>
+                    <div class="spinner-grow text-success"></div>
+                    <div class="spinner-grow text-info"></div>
+                    <div class="spinner-grow text-warning"></div>
+                    <div class="spinner-grow text-danger"></div>
+                    <div class="spinner-grow text-secondary"></div>
+                    <div class="spinner-grow text-dark"></div>
+                    <div class="spinner-grow text-light"></div>
+                    <button type="button" class="btn btn-danger">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<marquee><p class="text-danger">* Upload Only XLSX Format File* For better Performance upload documents with lines less than 10,000.............</p></marquee>
+
+</body>
+</html>
